@@ -1,126 +1,196 @@
-Training Plan Modules:
+Revised Training Plan Modules:
 
-Module 1: Introduction & GitLab Basics (30-60 mins)
+Module 1: Optimizing Your GitLab Environment & Workflow (30-45 mins)
 
-Objective: Understand the context of GitLab's project management tools and navigate the basic UI.
+Objective: Fine-tune the GitLab environment and individual settings for power users.
 Topics:
-What is GitLab? (Brief overview: Source Code Management + CI/CD + Project Management).
-Focus: The "Plan" stage capabilities.
-GitLab UI Tour: Dashboard, Groups, Projects, Key sidebar menus (Issues, Boards, Epics, Milestones).
-Groups vs. Projects: How work is organized.
-Creating/Navigating a Project: Setting up a space for practice.
+Advanced Notification Settings: Custom levels, Todos, Email filters.
+Profile Settings & Preferences: SSH Keys, GPG Keys, Theme, Syntax Highlighting.
+Project & Group Settings Deep Dive: Key configurations often overlooked (e.g., default branch protection, merge request settings, wiki/snippet visibility).
+Understanding GitLab Tiers: Briefly touch on how Free/Premium/Ultimate affects feature availability for topics covered.
 Activities:
-Log in to GitLab.
-Navigate the main dashboard.
-Create a new Project (or use a pre-created sandbox project).
-Explore the project's sidebar menus.
-Module 2: Issues - The Core Work Item (60-90 mins)
+Review and customize personal notification settings.
+Explore project settings relevant to upcoming modules (MR defaults, CI/CD settings).
+Module 2: Advanced Issue Management & Integrated Time Tracking (75-105 mins) (Focus: Moving beyond creation to sophisticated management and data extraction)
 
-Objective: Learn how to create, manage, and understand individual work items (tasks, user stories, bugs).
+Objective: Master advanced issue features for granular tracking, relationships, and utilize GitLab's time management capabilities.
 Topics:
-What is a GitLab Issue? (The fundamental unit of trackable work).
-Creating Issues: Title, Description (Markdown formatting), Assignees, Due Dates.
-Issue Details: Comments, Activity log, Notifications, Linking related items.
-Issue Types (if configured/available): Differentiating between bugs, features, tasks, etc.
-Managing Issues: Editing, Closing, Reopening, Locking conversations.
-Issue List View: Sorting, Filtering (by assignee, author, label, milestone, etc.).
-Quick Actions: Using commands in comments/descriptions for efficiency (e.g., /assign, /label, /milestone).
+Issue Deep Dive:
+Tasks Lists (Checklists) within Issues: Using them as lightweight sub-tasks, tracking completion.
+Issue Relationships: Linked, Related, Blocking, and Blocked by issues. Visualizing dependencies.
+Promoting Issues to Epics.
+Moving Issues between projects.
+Confidential Issues & Locking Issues.
+Issue Health Status (At-Risk, Needs Attention, On Track - Premium/Ultimate).
+Service Desk: Creating issues from emails for external feedback loops.
+Issue Templates: Standardizing bug reports, feature requests at project and group levels.
+Time Management in GitLab:
+Estimating Time: Using /estimate quick action.
+Tracking Spent Time: Using /spend quick action.
+Viewing Time Tracking Reports: Project-level summaries and per-issue breakdowns.
+Integrating time tracking with Milestones and billing cycles (conceptual).
+Limitations and best practices for accurate time logging.
 Activities:
-Create several sample issues representing backlog items (e.g., "Implement user login," "Fix button alignment," "Write API documentation").
-Assign issues to yourself or team members (if applicable).
-Add comments and use Markdown formatting.
-Practice filtering the issue list.
-Use a quick action to assign or add a label (preview for next module).
-Module 3: Labels - Categorization & Status Tracking (45-75 mins)
+Create issues with task lists and mark items as complete.
+Establish blocking relationships between two issues.
+Set up a basic issue template.
+Practice using /estimate and /spend on several issues.
+Review the time tracking report for the project.
+Discuss team conventions for time tracking.
+Module 3: Strategic Labeling & Advanced Filtering Techniques (60-90 mins) (Focus: Using labels for automation triggers, complex state management, and powerful reporting)
 
-Objective: Use labels to categorize issues and, crucially, track their status (backlog status).
+Objective: Implement advanced labeling strategies for workflow automation, multi-faceted categorization, and precise data retrieval.
 Topics:
-What are Labels? (Keywords for organization).
-Project vs. Group Labels: Scope and inheritance.
-Creating Labels: Naming conventions, color coding.
-Scoped Labels: The key to managing exclusive states (e.g., Status::, Priority::, Type::).
-Tracking Backlog Status: Defining and creating status labels (e.g., Status::Backlog, Status::ToDo, Status::InProgress, Status::Review, Status::Done).
-Applying Labels: Adding/removing labels from issues.
-Filtering by Labels: Finding all "High Priority" bugs or all "InProgress" items.
+Scoped Labels Mastery:
+Designing effective scoped label systems (e.g., Workflow::, Priority::, Team::, QA::Status).
+Enforcing workflow progression using scoped labels on Issue Boards.
+Group Labels vs. Project Labels: Strategic decisions for consistency vs. specificity. Promoting project labels to group labels.
+Labels for Automation:
+Using labels to trigger CI/CD jobs (e.g., a deploy::staging label).
+Conceptual: Labels as triggers for webhooks or external integrations via API.
+Advanced Filtering & Searching:
+Leveraging GitLab's powerful search syntax (AND/OR, exclusion, filtering by ID, reaction emojis).
+Saving complex search queries for quick access.
+Label Subscriptions & Notifications.
+Best practices for label hygiene: Archiving, avoiding clutter, establishing naming conventions.
 Activities:
-Navigate to the Labels section (Project or Group level).
-Create a set of scoped status labels (Status::Backlog, Status::ToDo, etc.).
-Create other useful labels (e.g., Type::Bug, Type::Feature, Priority::High).
-Apply various labels (including status labels) to the previously created issues.
-Practice filtering the issue list by different labels, especially status.
-Module 4: Milestones - Timeboxing & Release Planning (45-60 mins)
+Design a set of scoped labels for a hypothetical complex workflow (e.g., feature development with design, dev, QA, UAT stages).
+Apply these to issues and configure an Issue Board reflecting this workflow.
+Construct complex search queries using multiple labels, assignees, and other attributes.
+Discuss how labels could initiate automated actions in their context.
+Module 4: Work Hierarchies: Epics vs. Milestones vs. Issues/Tasks (60-75 mins)
 
-Objective: Group issues into time-bound periods (sprints, iterations, releases).
+Objective: Clearly differentiate and strategically utilize Epics, Milestones, and Issues (including task lists) for effective short-term and long-term planning.
 Topics:
-What are Milestones? (Representing sprints, releases, or phases with start/end dates).
-Creating Milestones: Title, Start Date, Due Date, Description.
-Assigning Issues to Milestones: Linking work to specific timeboxes.
-Milestone View: Progress tracking (burndown charts - Note: availability varies by tier), list of associated issues, linked merge requests.
-Using Milestones for Sprints vs. Releases.
-Filtering Issues by Milestone.
+Epics (Strategic Themes - Primarily Premium/Ultimate):
+Purpose: Grouping issues and child-epics under large initiatives or features.
+Characteristics: Start/end dates (fixed or inherited), multi-level hierarchy.
+Use Cases: Product roadmapping, tracking major deliverables, cross-project initiatives.
+Issues (Work Items/Tasks):
+Purpose: The fundamental unit of work (story, bug, task).
+Task Lists within Issues (Sub-tasks): For breaking down an issue into smaller, manageable steps without creating separate formal issues. When to use this vs. separate issues.
+Milestones (Time-Boxes):
+Purpose: Grouping issues (and indirectly, parts of epics) into time-bound periods.
+Characteristics: Start/end dates, focused on delivery cadence.
+Use Cases: Sprints, iterations, release versions, phases.
+Key Distinctions & Relationships:
+Epic = What (the initiative), Milestone = When (the timebox), Issue = How (the specific work).
+How they interact: An Epic can span multiple Milestones; a Milestone can contain Issues from multiple Epics.
+Visualizing: Epics on Roadmaps, Issues in Milestones & Boards.
 Activities:
-Create two Milestones (e.g., "Sprint 1 - April", "Q2 Release").
-Assign some issues to "Sprint 1 - April".
-Assign other issues (perhaps including one representing a larger deliverable) to "Q2 Release".
-Explore the Milestone view page for "Sprint 1 - April".
-Filter the issue list to show only items in "Sprint 1 - April".
-Module 5: Epics - Grouping Large Initiatives (45-75 mins) - Note: Premium/Ultimate Feature
+Scenario-based discussion: Given a large project, map out potential Epics, child Issues, and how Milestones would apply.
+Analyze how task lists within an issue could be used vs. creating separate child issues for an Epic.
+If Epics are available: Create a multi-level epic structure and assign issues. View on a roadmap.
+Module 5: Advanced Git Branching Workflows: Rebase vs. Merge with GitLab (60-90 mins)
 
-Objective: Organize related issues and potentially other epics under larger themes or features.
+Objective: Understand the implications of rebasing versus merging in Git, and how to apply these strategies effectively within a GitLab Merge Request workflow.
 Topics:
-What are Epics? (Containers for strategic initiatives spanning multiple issues/milestones).
-Note: Clearly state this is often a paid feature (GitLab Premium/Ultimate). If using Free tier, explain the concept but skip hands-on or discuss workarounds (e.g., using specific labels).
-Creating Epics: Title, Description, Start/End Dates (fixed or inherited).
-Epic Hierarchy: Adding child epics and child issues.
-Viewing Epics: Tree structure, Roadmap view.
-Epics vs. Milestones: Purpose and usage differences (Theme/Initiative vs. Timebox).
-Activities (If feature available):
-Navigate to the Epics section (usually at the Group level).
-Create an Epic (e.g., "User Management Revamp").
-Add existing issues (like "Implement user login") as children to the Epic.
-Create another, smaller Epic (e.g., "Profile Page Enhancements") and add it as a child to the main Epic.
-Explore the Epic tree view.
-Module 6: Issue Boards - Visualizing Workflow (60-90 mins)
-
-Objective: Create and use Kanban-style boards to visualize and manage the flow of work based on status labels or other criteria.
-Topics:
-What are Issue Boards? (Visual workflow tool).
-Default Boards: How they are initially configured.
-Creating Custom Boards: Defining the scope (entire project, specific milestone, etc.).
-Configuring Board Columns:
-List Settings: Adding columns based on Labels (most common for status), Assignees, or Milestones.
-Mapping Status: Setting up columns corresponding to your Status:: labels (ToDo, InProgress, Done).
-Using the Board: Dragging and dropping issues between columns to update their status (label).
-Board Filtering: Focusing the board view.
-Multiple Boards: Creating boards for different teams, workflows, or views.
+Core Concepts Review:
+What is git merge? (Preserves history, creates merge commits).
+What is git rebase? (Rewrites history, creates a linear history).
+Pros and Cons:
+Merge: Traceability, explicit integration points vs. cluttered history.
+Rebase: Cleaner, linear history vs. risk of rewriting shared history, potential for more complex conflict resolution (if done late).
+Strategic Application:
+When to Rebase: Typically on local feature branches before pushing or to update a feature branch with changes from the target branch (e.g., main).
+When to Merge: Integrating main into a long-lived feature branch (to avoid constant rebasing), or as the final step of integrating a feature branch via a Merge Request if that's the chosen project strategy.
+GitLab Merge Request (MR) Settings & Strategies:
+Merge Commit (default).
+Merge commit with semi-linear history (encourages rebase before merge).
+Fast-forward merge (only if feature branch is directly ahead of target).
+Squash and merge (combines all feature branch commits into one on the target branch).
+Team workflows: Feature branching, Gitflow (and how rebase/merge fit).
+Interactive Rebase (git rebase -i): Squashing, rewording, reordering commits on a feature branch before creating an MR or pushing for review.
+Handling Merge Conflicts during Rebase vs. Merge.
+Caution: Never rebase a branch that others are using and pulling from.
 Activities:
-Navigate to Issue Boards.
-Explore the default board.
-Create a new board named "Development Workflow".
-Configure columns based on the Status:: labels created earlier (Backlog, ToDo, InProgress, Review, Done).
-Drag and drop issues between columns; verify the labels update on the issues themselves.
-Create another board focused only on issues within the "Sprint 1 - April" milestone.
+Live demo/walkthrough:
+Rebasing a feature branch onto main.
+Merging main into a feature branch.
+Resolving a simple conflict in both scenarios.
+Review GitLab project settings for MRs and discuss implications of different merge methods.
+Team discussion on establishing a consistent branching and merging strategy.
+Module 6: Advanced Issue Board Configurations & Automation (45-60 mins)
 
-
-Module 7: Roadmaps & Other Planning Tools (30-60 mins) - Note: Partially Premium/Ultimate
-
-Objective: Understand higher-level timeline visualization and other relevant planning features.
+Objective: Leverage advanced Issue Board features for highly customized workflow visualization and automation.
 Topics:
-Roadmap View (Note: Premium/Ultimate Feature): Visualizing Epics over time based on their start/end dates. Gantt-like overview.
-Iteration Cadences (Note: Often Premium/Ultimate): An alternative/complement to Milestones for managing automated sprint schedules. Briefly explain if relevant/available.
-Analytics (Value Stream, Burndown/Burnup Charts): Overview of reporting capabilities (Note: Availability varies significantly by tier).
-Activities (If features available):
-Explore the Roadmap view (if Epics are used).
-Briefly look at any available Analytics charts related to issues/milestones.
-Module 8: Tying it Together & Best Practices (30 mins)
-
-Objective: Recap the workflow and discuss tips for effective use.
-Topics:
-Review: Typical workflow (Idea -> Epic -> Issue -> Backlog Label -> Milestone Planning -> Board Movement -> Done).
-Consistency is Key: Importance of standardized labels and milestone usage.
-Using Issue Templates: Speeding up issue creation for common types (bugs, features).
-Notifications: Managing your GitLab updates.
-Linking Issues, Merge Requests, and Commits: Connecting code changes back to requirements/tasks.
+Multi-list configurations: Columns based on Assignees, Milestones, Iterations (Premium/Ultimate), Labels.
+WIP (Work In Progress) Limits: Setting constraints on columns.
+Board Scope: Project, Group, specific Milestones, Iterations.
+Swimlanes: Grouping issues horizontally by Epic (Premium/Ultimate) on a board.
+Using boards for specific use cases: Bug Triage, Sprint Planning, Release Management.
+Quick board actions: Creating issues directly in columns.
 Activities:
-Discussion: Q&A, how to apply this to the team's specific context.
-Review a sample issue showing links to MRs or other issues.
+Configure a board with WIP limits.
+If available, set up swimlanes by Epic on a board.
+Design a board specifically for a "Sprint Retrospective" or "Bug Triage" process.
+Module 7: GitLab CI/CD Foundations (Refresher/Intro for Context) (30-45 mins)
+
+
+Objective: Ensure a common understanding of GitLab CI/CD core components before diving into best practices.
+Topics:
+.gitlab-ci.yml: The heart of GitLab CI/CD.
+Pipelines, Stages, Jobs: Basic structure.
+Runners: Shared, Group, Specific – how they execute jobs.
+Variables: Predefined, Custom, Protected, Masked.
+Artifacts & Caching: Storing results and speeding up pipelines.
+Activities:
+Review a simple .gitlab-ci.yml file.
+Identify stages, jobs, and basic keywords.
+Briefly check runner availability in the project/group.
+Module 8: CI/CD Pipeline Best Practices & Dynamic Test Execution (90-120 mins)
+
+Objective: Implement CI/CD best practices for efficiency, maintainability, and security, including how to structure tests to run conditionally.
+Topics:
+CI/CD Best Practices:
+Optimize for Speed: Small, fast jobs; parallelization (parallel: keyword); efficient Docker image usage.
+Effective Caching: Dependencies, build outputs.
+Secure Secrets Management: Using CI/CD variables (protected, masked), integration with HashiCorp Vault (Premium/Ultimate).
+DRY Pipelines: include: for templates/common configurations, YAML anchors/aliases (&, *, <<).
+Idempotent Jobs: Ensuring jobs can be re-run without negative side effects.
+Review Apps: Dynamically creating environments for MRs.
+Managing Pipeline Costs/Resources (especially with shared runners).
+Structuring Pipeline Tests to Run "As Needs" Basis:
+rules: Keyword: The modern and most flexible way.
+rules:if: with CI/CD variables (predefined or custom).
+rules:changes: Run jobs only if specific files/paths change (e.g., run backend tests if backend code changes).
+rules:exists: Run jobs if specific files exist.
+rules:when: manual for optional jobs (e.g., deployment to production).
+rules:allow_failure: for non-critical jobs.
+only/except (legacy but still encountered): Basic conditional execution based on branches, tags, variables, changes.
+Using Variables to Control Job Execution: Setting variables in one job to be used in rules:if: of subsequent jobs.
+Parent-Child Pipelines & Dynamic Pipelines: For complex scenarios where pipeline structure is determined at runtime.
+Activities:
+Analyze an existing .gitlab-ci.yml (or a provided example) for areas of improvement based on best practices.
+Modify a CI job to run only when files in a specific directory (/backend) are changed using rules:changes:.
+Create a manual job for deployment using rules:when: manual.
+Discuss strategies for running different test suites (unit, integration, E2E) based on triggers (e.g., MR vs. main branch, specific code changes).
+Module 9: Strategic Roadmapping & High-Level Planning (45-60 mins) - Primarily Premium/Ultimate
+
+Objective: Utilize GitLab Roadmaps for long-term strategic visualization and communication.
+Topics:
+Roadmap View: Visualizing Epics over time, based on start/end dates.
+Filtering and customizing the Roadmap view.
+Tracking Epic progress and dependencies on the Roadmap.
+Communicating strategic plans to stakeholders using Roadmaps.
+Alternative for Free Tier: Discuss how labels and milestones combined can offer a simpler form of roadmap/release planning.
+Activities:
+If using Epics: Review the Roadmap, adjust Epic dates, and observe changes.
+Discuss how this view aids in long-term planning and stakeholder communication.
+Module 10: Advanced Ecosystem Integration & Automation (30-45 mins)
+
+Objective: Briefly explore advanced automation and integration possibilities beyond the core UI.
+Topics:
+GitLab API: Overview of capabilities for custom automation and integration.
+Webhooks: Triggering external actions based on GitLab events.
+GitLab Triage (Bot): Automating common issue/MR management tasks.
+Integrations: Connecting with Slack, Jira, etc. (focus on less common or more powerful integrations).
+Activities:
+Show examples of API usage (e.g., via curl or a simple script).
+Review available project integrations.
+Discuss potential automation opportunities relevant to the team.
+
+Wrap-up & Next Steps:
+Q&A tailored to advanced scenarios.
+Challenge participants to identify 1-2 advanced features or practices to implement in their projects.
+Resources for continued advanced learning: GitLab documentation (DevOps practices, API docs), GitLab blog for new features.
