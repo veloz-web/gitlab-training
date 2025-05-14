@@ -13,7 +13,7 @@ Log in and navigate to a shared sandbox project.
 Quickly explore project sidebar menus and key settings areas.
 Module 2: Mastering Issue Management & Integrated Time Tracking (60-90 mins)
 
-Objective: Master advanced issue features for granular tracking, establishing relationships between work items, and effectively utilizing GitLab's integrated time management capabilities (all available in Premium).
+Objective: Master advanced issue features for granular tracking, establishing relationships between work items, and effectively utilizing GitLab's integrated time management capabilities.
 Topics:
 Issue Deep Dive:
 Beyond Basics: Title, Rich Description (Markdown), Assignees, Due Dates, Labels, Milestones.
@@ -22,10 +22,10 @@ Issue Relationships: Linked, Related, Blocking, and Blocked by issues.
 Promoting Issues to Epics. 
 Moving Issues between projects. 
 Confidential Issues & Locking Issue conversations. 
-Issue Health Status (At-Risk, Needs Attention, On Track – available in Premium). 
-Service Desk: Creating issues from emails (available in Premium). 
+Issue Health Status (At-Risk, Needs Attention, On Track). 
+Service Desk: Creating issues from emails. 
 Issue Templates: Standardizing common issue types. 
-Time Management in GitLab (available in Premium):
+Time Management in GitLab:
 Estimating Time: /estimate quick action. 
 Tracking Spent Time: /spend quick action. 
 Viewing Time Tracking Reports. 
@@ -57,12 +57,12 @@ Construct and save complex search queries.
 Discuss label automation applications. 
 Module 4: Milestones for Timeboxing & Release Planning (40-50 mins)
 
-Objective: Effectively use Milestones to group issues into time-bound periods and track progress (core Premium feature).
+Objective: Effectively use Milestones to group issues into time-bound periods and track progress.
 Topics:
 What are Milestones? (Representing sprints, releases, phases). 
 Creating and Managing Milestones. 
 Assigning Issues to Milestones. 
-Milestone View: Progress tracking (burndown charts are available in Premium; note that more advanced analytics like burnup charts might be limited compared to Ultimate), associated issues/MRs. 
+Milestone View: Progress tracking, associated issues/MRs. 
 Using Milestones for Sprints vs. Releases. 
 Activities:
 Create Milestones (e.g., "Current Sprint," "Next Release Cycle"). 
@@ -73,12 +73,12 @@ Module 5: Epics for Structuring Larger Initiatives (45-60 mins)
 
 Objective: Utilize Epics in GitLab Premium to organize and track collections of related issues and child epics under larger themes or features.
 Topics:
-What are Epics? (Containers for strategic initiatives – a Premium feature). 
+What are Epics? (Containers for strategic initiatives. 
 Creating Epics: Title, Description, Start/End Dates (fixed or inherited). 
 Epic Hierarchy: Adding child epics and child issues. 
 Viewing Epics: Tree structure, linking to Roadmaps. 
 Epics vs. Milestones vs. Issues: Purpose and strategic usage. 
-Activities (using Premium features):
+Activities:
 Navigate to the Epics section (Group level).
 Create a parent Epic (e.g., "User Management Revamp"). 
 Add existing issues as children to the Epic; create a child epic. 
@@ -90,9 +90,9 @@ Topics:
 Recap: Issue Boards as a visual workflow tool. 
 Creating Custom Boards: Scope (project, group). 
 Advanced Column Configurations (Labels, Assignees, Milestones). 
-WIP (Work In Progress) Limits (available in Premium). 
+WIP (Work In Progress) Limits. 
 Board Scope: Project, Group. 
-Swimlanes: Grouping issues horizontally by Epic (available in Premium). 
+Swimlanes: Grouping issues horizontally by Epic. 
 Using boards for specific use cases (Bug Triage, Sprint Planning). 
 Activities:
 Configure a board with WIP limits. 
@@ -100,7 +100,7 @@ Set up swimlanes by Epic on a board.
 Design a board for a "Sprint Retrospective" or "Bug Triage" process. 
 Module 7: Roadmaps for Strategic Visualization (30-45 mins)
 
-Objective: Utilize GitLab Roadmaps (available in Premium) for long-term strategic visualization and communication of Epics over time.
+Objective: Utilize GitLab Roadmaps for long-term strategic visualization and communication of Epics over time.
 Topics:
 Roadmap View: Visualizing Epics based on their start/end dates (Gantt-like overview in Premium). 
 Filtering and customizing the Roadmap view. 
